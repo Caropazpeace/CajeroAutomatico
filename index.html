@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cajero Automático</title>
+</head>
+<body>
+  <h1>Cajero Automático</h1>
+
+  <div id="login">
+    <h2>Selecciona una cuenta:</h2>
+    <button onclick="login(0)">Persona 1</button>
+    <button onclick="login(1)">Persona 2</button>
+    <button onclick="login(2)">Persona 3</button>
+  </div>
+
+  <div id="actions" style="display: none;">
+    <h2>Bienvenido, <span id="accountName"></span>!</h2>
+    <p>Selecciona una opción:</p>
+    <button onclick="checkBalance()">Consultar saldo</button>
+    <button onclick="deposit()">Ingresar monto</button>
+    <button onclick="withdraw()">Retirar monto</button>
+    <br><br>
+    <button onclick="logout()">Cerrar sesión</button>
+  </div>
+
+  <div id="balance" style="display: none;">
+    <h2>Saldo actual:</h2>
+    <p id="balanceAmount"></p>
+    <button onclick="backToActions()">Volver</button>
+  </div>
+
+  <div id="deposit" style="display: none;">
+    <h2>Ingresar monto:</h2>
+    <input type="number" id="depositAmount">
+    <button onclick="confirmDeposit()">Confirmar</button>
+    <button onclick="backToActions()">Cancelar</button>
+  </div>
+
+  <div id="withdraw" style="display: none;">
+    <h2>Retirar monto:</h2>
+    <input type="number" id="withdrawAmount">
+    <button onclick="confirmWithdraw()">Confirmar</button>
+    <button onclick="backToActions()">Cancelar</button>
+  </div>
+  <script src="functions.js"></script>
+</body>
+</html>
